@@ -1,0 +1,124 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #323232;
+    color: #d9d9d9;
+    gap: 20px;
+    padding: 20px 8vw;
+    padding-top: 80px;
+    margin-top: 100px;
+}
+
+.footer-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+}
+
+.footer-content-left,
+.footer-content-right,
+.footer-content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.footer-content-left li,
+.footer-content-right li,
+.footer-content-center li {
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-content-right h2,
+.footer-content-center h2 {
+    color: white;
+}
+
+.footer-social-icons img {
+    width: 40px;
+    margin-left: 15px;
+}
+
+.footer hr {
+    width: 100%;
+    height: 2px;
+    margin: 20px 0px;
+    background-color: grey;
+    border: none;
+}
+
+.footer-social-icons img:hover {
+    background-color: aqua;
+    color: black;
+    border-radius: 50%;
+    transition: 0.7s;
+    transform: scale(1.2);
+}
+
+.footer-content-center ul li:hover {
+    color: aqua;
+}
+
+.footer-content-right li:hover,.footer-content-right li a:hover {
+    color: aqua;
+}
+.footer-content-right ul li a{
+    color: #fff;
+}
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  .footer-content-left,
+  .footer-content-center,
+  .footer-content-right {
+    align-items: center;
+    gap: 10px;
+  }
+  .footer {
+    padding: 20px 2vw;
+    margin-top: 40px;
+  }
+  .footer-social-icons img {
+    margin-left: 8px;
+    width: 32px;
+  }
+}
+
+/* Tablets (min-width: 601px) and (max-width: 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .footer-content-left,
+  .footer-content-center,
+  .footer-content-right {
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .footer {
+    padding: 20px 4vw;
+    margin-top: 60px;
+  }
+}
+
+/* Small laptops (min-width: 901px) and (max-width: 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .footer-content {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 60px;
+  }
+  .footer {
+    padding: 20px 6vw;
+    margin-top: 80px;
+  }
+}

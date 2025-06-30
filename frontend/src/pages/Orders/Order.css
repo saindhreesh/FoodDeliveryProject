@@ -1,0 +1,169 @@
+.orders-admin {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.orders-admin h2 {
+  margin-bottom: 20px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.orders-table th, .orders-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.orders-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.order-items {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.order-items li {
+  margin-bottom: 8px;
+}
+
+.order-address {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.failed {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.item-image{
+    width: 50px;
+     /* margin: 20px; */
+    margin-right: 20px;
+}
+
+td ul li b{
+    margin-top: 0px;
+    font-size: 14px;
+}
+
+.order-status{
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin: 30px;
+  margin-top: 100px;
+}
+.order-status a{
+  text-decoration: underline;
+  color: rgb(21, 22, 22);
+  text-underline-offset: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .orders-admin {
+    padding: 10px;
+  }
+
+  .orders-admin h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .orders-table, 
+  .orders-table thead, 
+  .orders-table tbody, 
+  .orders-table th, 
+  .orders-table td, 
+  .orders-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .orders-table thead {
+    display: none; /* Hide headers on mobile */
+  }
+
+  .orders-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .orders-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    padding: 10px 5px;
+    font-size: 14px;
+    position: relative;
+  }
+
+  .orders-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-align: left;
+    position: absolute;
+    left: 10px;
+    color: #333;
+  }
+
+  .item-image {
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  .order-items li {
+    font-size: 13px;
+  }
+
+  .order-address {
+    font-size: 13px;
+  }
+
+  select {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .success, .failed {
+    display: inline-block;
+    font-size: 13px;
+    padding: 4px 6px;
+  }
+
+  .order-status {
+    font-size: 13px;
+    text-align: center;
+    margin: 20px 0;
+  }
+}

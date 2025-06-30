@@ -12,7 +12,7 @@ const StoreContextProvider = (props) => {
     const [food_list, setFoodList] = useState([]);
     const [token, setToken] = useState('');
     const [menu_list, setMenuList] = useState([]);
-    const url = 'http://localhost:5000';
+    const url = 'https://food-del-backend-f266.onrender.com';
 
 
     const fetchMenu = async () => {

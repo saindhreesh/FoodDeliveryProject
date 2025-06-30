@@ -9,6 +9,6 @@ const Navbar = () => {
       <img className='profile' src={assets.profile_image} alt="" />
     </div>
   )
-}
+};
 
 export default Navbar

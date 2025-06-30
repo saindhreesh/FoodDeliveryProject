@@ -27,7 +27,7 @@
     }
 }
 
-/* Media Query for mobile phones (480px and below) */
+
 @media screen and (max-width: 480px) {
     .navbar {
         flex-direction: column;

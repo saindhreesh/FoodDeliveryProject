@@ -4,8 +4,7 @@ import { assets } from '../../assets/frontend_assets/assets';
 import { StoreContext } from '../../Context/StoreContext';
 
 const FoodItem = ({ id, name, description, price, image }) => {
-  const {  addToCart, removeFromCart, url, token } = useContext(StoreContext);
-  const { cartItems = {} } = useContext(StoreContext);
+  const { addToCart, removeFromCart, url, token, cartItems = {} } = useContext(StoreContext);
   const [loading, setLoading] = useState(false);
 
   const handleRemove = async () => {

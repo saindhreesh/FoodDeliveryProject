@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Orders.css';
 
-const Orders = () => {
+const Orders = ({url}) => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/order/all');
+        const response = await axios.get(`${url}/api/order/all`);
         setOrders(response.data.orders || response.data.response || []);
       } catch (err) {
         console.error("Error fetching orders", err);
@@ -16,12 +16,12 @@ const Orders = () => {
       }
     };
     fetchOrders();
-  }, []);
+  }, [url]);
 
   const handleStatusChange = async (orderId, newStatus) => {
     try {
       // Use correct backend route for status update
-      const response = await axios.patch(`http://localhost:5000/api/order/update/${orderId}`, {
+      const response = await axios.patch(`${url}/api/order/update/${orderId}`, {
         status: newStatus
       });
       // Update local state after successful update
